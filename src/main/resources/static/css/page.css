@@ -1,0 +1,130 @@
+
+.title {
+    float: left;
+    width: calc(100% - 250px);
+    margin-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.title__divider {
+    float: left;
+    width: calc(100% - 250px);
+    margin-left: 15px;
+    height: 2px;
+    background: black;
+    border: none;
+}
+
+
+.calculation-form {
+    float: left;
+    width: calc(100% - 250px);
+    margin-left: 15px;
+}
+.calculation-form__title {
+    margin-left: 20px;
+}
+.calculation-form__price {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-form__price-title {
+    margin-right: 40px;
+}
+
+
+.calculation-form__period {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-form__period-title {
+    margin-right: 40px;
+}
+
+
+.calculation-form__rate {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-form__rate-title {
+    margin-right: 40px;
+}
+
+
+
+
+.calculation-form__repayment-method {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-form__method-title {
+    margin-right: 40px;
+}
+.calculation-form__calculation-button {
+    margin-left: 20px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+.calculation-result {
+    float: left;
+    width: calc(100% - 250px);
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.calculation-result__title {
+    margin-left: 20px;
+}
+
+
+.calculation-result__rep-principal {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-result__rep-principal-title {
+    margin-right: 40px;
+}
+
+
+
+.calculation-result__interest {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-result__interest-title {
+    margin-right: 40px;
+}
+
+
+
+.calculation-result__m-payment {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.calculation-result__m-payment-title {
+    margin-right: 22px;
+}
+
+
+
+
+input {
+    padding: 10px 10px;
+    line-height: 15px;
+}
+
+button {
+    background-color: #170696;
+    color: white;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0e0266;
+}

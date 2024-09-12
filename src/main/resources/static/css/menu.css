@@ -1,0 +1,42 @@
+#menu {
+    height: 100%;
+    width: 200px;
+    float: left;
+    padding-left: 30px;
+}
+
+.menu-title {
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.menu-hr {
+    margin: 0px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    height: 2px;
+    background: black;
+    border: none;
+}
+
+
+li {
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+li a {
+    font-size: 12pt;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: black;
+}
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 100%;
+    width: 0px;
+    float: left;
+}
