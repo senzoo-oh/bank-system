@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <style type="text/css">
+        html,body {height:100%}
+  </style>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" href="/css/menu.css">
+  <link rel = "stylesheet" href="/css/page.css">
+  <title>대출/환율 계산기</title>
+</head>
+<body>
+
+<div id = "menu">
+  <li><h4 class = "menu-title">대출</h4></li>
+  <hr class = "menu-hr">
+  <li><a href = "">대출납입계산</a></li>
+  <li><a href = "">대출 상품조회</a></li>
+
+  <li><h4 class = "menu-title">환율</h4></li>
+  <hr class = "menu-hr">
+  <li><a href = "">환율 계산기</a></li>
+  <li><a href = "">환율 조회</a></li>
+</div>
+<div class = "vertical-line"></div>
+
+<h4 class = "title">대출 납입 계산</h4>
+<hr class = "title__divider">
+
+<div class = "calculation-form">
+  <h4 class = "calculation-form__title">대출계산</h4>
+  <form th:action = "@{/loanCalculator}" th:object = "${calculatorForm}" method = "post">
+    <div class = "calculation-form__price">
+      <label class = "calculation-form__price-title">대출금액</label>
+      <input type = "text" th:field="*{price}" size = "15">
+      <span>원</span>
+    </div>
+
+    <div class = "calculation-form__period">
+      <label class = "calculation-form__period-title">대출기간</label>
+      <input type = "text" th:field="*{period}" size = "15">
+      <span>년</span>
+    </div>
+
+    <div class = "calculation-form__rate">
+      <label class = "calculation-form__rate-title">대출금리</label>
+      <span>연</span>
+      <input type = "text" th:field="*{rate}" size = "12">
+      <span>%</span>
+    </div>
+
+    <div class = "calculation-form__repayment-method">
+      <label class = "calculation-form__method-title">상환방법</label>
+
+      <input type = "radio" value = "만기일시상환" th:field="*{method}" id = "만기일시상환" name = "method">
+      <label for = "만기일시상환">만기일시상환</label>
+
+      <input type = "radio" value = "원금균등분할상환" th:field="*{method}" id = "원금균등분할상환" name = "method">
+      <label for = "원금균등분할상환">원금균등분할상환</label>
+
+      <input type = "radio" value = "원리금균등분할상환" th:field="*{method}" id = "원리금균등분할상환" name = "method">
+      <label for = "원리금균등분할상환">원리금균등분할상환</label>
+    </div>
+    <button type = "submit" class = "calculation-form__calculation-button">계산하기</button>
+  </form>
+</div>
+
+<div class = "calculation-result" th:if="${result != null}">
+  <h4 class = "calculation-result__title">상환예정금액</h4>
+
+  <div class = "calculation-result__rep-principal">
+    <label class = "calculation-result__rep-principal-title">상환원금</label>
+    <label th:text="${result.principal}">0</label>
+    <span>원</span>
+  </div>
+
+  <div class = "calculation-result__interest">
+    <label class = "calculation-result__interest-title">이자금액</label>
+    <label th:text="${result.interest}"></label>
+    <span>원</span>
+  </div>
+
+  <div class = "calculation-result__m-payment">
+    <label class = "calculation-result__m-payment-title">월 납부금액</label>
+    <label th:text="${result.monthlyPayment}">0</label>
+    <span>원</span>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
