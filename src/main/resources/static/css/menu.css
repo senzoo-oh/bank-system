@@ -28,6 +28,7 @@ li {
 li a {
     font-size: 12pt;
     text-decoration: none;
+    link: black;
 }
 
 li a:visited {
