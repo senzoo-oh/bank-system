@@ -7,15 +7,16 @@
   <meta charset="UTF-8">
   <link rel = "stylesheet" href="/css/menu.css">
   <link rel = "stylesheet" href="/css/page.css">
-  <title>대출/환율 계산기</title>
+  <link rel = "icon" href = "image/money.png">
+  <title>대출/환율 계산</title>
 </head>
 <body>
 
 <div id = "menu">
   <li><h4 class = "menu-title">대출</h4></li>
   <hr class = "menu-hr">
-  <li><a href = "">대출납입계산</a></li>
-  <li><a href = "">대출 상품조회</a></li>
+  <li><a th:href="@{/loanCalculator}">대출납입계산</a></li>
+  <li><a th:href="@{/loanProductList}">대출 상품조회</a></li>
 
   <li><h4 class = "menu-title">환율</h4></li>
   <hr class = "menu-hr">
@@ -24,8 +25,11 @@
 </div>
 <div class = "vertical-line"></div>
 
-<h4 class = "title">대출 납입 계산</h4>
-<hr class = "title__divider">
+<div class = "banner">
+  <h4 class = "title">대출 납입 계산</h4>
+  <hr class = "title__divider">
+</div>
+
 
 <div class = "calculation-form">
   <h4 class = "calculation-form__title">대출계산</h4>

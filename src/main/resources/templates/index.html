@@ -6,14 +6,15 @@
     </style>
     <title>대출/환율 계산</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel = "stylesheet" href="/css/menu.css">
+    <link rel = "stylesheet" href = "/css/menu.css">
+    <link rel = "icon" href = "image/money.png">
 </head>
 <body>
 <div id = "menu">
     <li><h4 class = "menu-title">대출</h4></li>
     <hr class = "menu-hr">
     <li><a th:href="@{/loanCalculator}">대출납입계산</a></li>
-    <li><a href = "">대출 상품조회</a></li>
+    <li><a th:href="@{/loanProductList}">대출 상품조회</a></li>
 
     <li><h4 class = "menu-title">환율</h4></li>
     <hr class = "menu-hr">
