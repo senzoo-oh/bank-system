@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <style type="text/css">
+        html,body {height:100%}
+    </style>
+    <title>대출/환율 계산</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel = "stylesheet" href="/css/menu.css">
+    <link rel = "stylesheet" href="/css/page.css">
+    <link rel = "stylesheet" href="/css/loanProductList.css">
+    <link rel = "icon" href = "image/money.png">
+</head>
+<body>
+<div id = "menu">
+    <li><h4 class = "menu-title">대출</h4></li>
+    <hr class = "menu-hr">
+    <li><a th:href="@{/loanCalculator}">대출납입계산</a></li>
+    <li><a th:href="@{/loanProductList}">대출 상품조회</a></li>
+
+    <li><h4 class = "menu-title">환율</h4></li>
+    <hr class = "menu-hr">
+    <li><a href = "">환율 계산기</a></li>
+    <li><a href = "">환율 조회</a></li>
+</div>
+<div class = "vertical-line"></div>
+
+<div class = "banner">
+    <h4 class = "title">대출 상품조회</h4>
+    <hr class = "title__divider">
+</div>
+
+<div class = "board">
+    <div class = "product-list" th:each="product:${loanProductList}">
+        <a th:href = "${product.loanLink}" target="_blank">
+            <h2 class = "product-list__title" th:text = "${product.loanName}"></h2>
+        </a><br>
+        <h4 class = "product-list__attribute">대출대상</h4>
+        <div class = "product-list__content" th:text = "${product.loanTarget}"></div><br>
+        <h4 class = "product-list__attribute">대출금리</h4>
+        <div class = "product-list__content" th:text = "${product.interestRate}"></div><br>
+        <h4 class = "product-list__attribute">대출한도</h4>
+        <div class = "product-list__content" th:text = "${product.loanLimit}"></div><br>
+        <h4 class = "product-list__attribute">대출기간</h4>
+        <div class = "product-list__content" th:text = "${product.loanTerm}"></div><br>
+    </div>
+</div>
+
+</body>
+</html>

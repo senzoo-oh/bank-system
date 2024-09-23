@@ -1,0 +1,31 @@
+.product-list {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: green;
+
+    margin-left: 15px;
+    margin-bottom: 10px;
+
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product-list__title {
+    display: inline;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-list__attribute {
+    display: inline;
+}
+
+.product-list__content {
+    display: block;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
