@@ -1,6 +1,5 @@
 package senzoo.bank.domain;
 
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
