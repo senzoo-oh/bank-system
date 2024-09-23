@@ -1,21 +1,4 @@
 
-.title {
-    float: left;
-    width: calc(100% - 250px);
-    margin-left: 15px;
-    margin-top: 50px;
-    margin-bottom: 5px;
-}
-.title__divider {
-    float: left;
-    width: calc(100% - 250px);
-    margin-left: 15px;
-    height: 2px;
-    background: black;
-    border: none;
-}
-
-
 .calculation-form {
     float: left;
     width: calc(100% - 250px);

@@ -41,3 +41,24 @@ li a:visited {
     width: 0px;
     float: left;
 }
+
+.banner {
+    float: left;
+    width: calc(100% - 250px);
+}
+.title {
+    margin-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.title__divider {
+    margin-left: 15px;
+    height: 2px;
+    background: black;
+    border: none;
+}
+
+.board {
+    float: left;
+    width: calc(100% - 250px);
+}
